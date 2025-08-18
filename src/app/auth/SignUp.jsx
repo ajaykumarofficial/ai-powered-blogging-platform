@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import React from "react";
 
 export default function SignUp() {
@@ -87,6 +88,7 @@ export default function SignUp() {
 
             {/* Social login */}
             <div className="space-y-3">
+            <p className="text-center">Already Have a Account? <Link href={'/auth/sign-in'} className="text-brand underline" >Sign in</Link></p>
                 <button
                     type="button"
                     className="w-full flex items-center justify-center gap-2 border border-gray-300 rounded-lg px-5 py-2.5 text-sm font-medium hover:bg-gray-100"

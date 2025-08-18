@@ -18,25 +18,29 @@ const Navbar = () => {
                 <div className="flex items-center space-x-2 md:order-2">
                     {/* Desktop only buttons */}
                     <div className="hidden md:flex space-x-2">
+                        {/* Create Blog Button */}
                         <button
-                        onClick={() => router.push("/auth/sign-in")}
+                            onClick={() => router.push("/create-blog")}
                             type="button"
-                            className="text-white bg-brand hover:bg-brand focus:ring-4 
-              focus:outline-none focus:ring-blue-300 font-medium rounded-lg 
-              text-sm px-4 py-2 text-center"
+                            className="flex items-center gap-2 text-white bg-gradient-to-r from-brand to-purple-600 
+      hover:from-purple-600 hover:to-brand focus:ring-4 focus:outline-none focus:ring-purple-300 
+      font-semibold rounded-xl text-sm px-5 py-2 shadow-lg transition-all duration-200"
+                        >
+                            Create Blog
+                        </button>
+
+                        {/* Sign In Button */}
+                        <button
+                            onClick={() => router.push("/auth/sign-in")}
+                            type="button"
+                            className="text-white bg-brand hover:bg-brand/90 focus:ring-4 
+      focus:outline-none focus:ring-blue-300 font-medium rounded-lg 
+      text-sm px-4 py-2"
                         >
                             Sign In
                         </button>
-                        <button
-                        onClick={() => router.push("/auth/sign-up")}
-                        type="button"
-                            className="text-white bg-brand hover:bg-brand focus:ring-4 
-              focus:outline-none focus:ring-blue-300 font-medium rounded-lg 
-              text-sm px-4 py-2 text-center"
-                        >
-                            Sign Up
-                        </button>
                     </div>
+
 
                     {/* Mobile menu button */}
                     <button
@@ -85,11 +89,11 @@ const Navbar = () => {
                         </li>
                         <li>
                             <a
-                                href="#"
+                                href="/blogs"
                                 className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 
                 md:hover:bg-transparent md:hover:text-brand md:p-0"
                             >
-                                About
+                                Blogs
                             </a>
                         </li>
                         <li>
@@ -113,18 +117,18 @@ const Navbar = () => {
 
                         {/* Mobile-only login/signin */}
                         <li className="flex flex-col space-y-2 mt-4 md:hidden">
+                            <button onClick={() => router.push("/create-blog")} className="w-full text-white bg-brand hover:bg-brand focus:ring-4 
+                focus:outline-none focus:ring-blue-300 font-medium rounded-lg 
+                text-sm px-4 py-2 text-center">
+                                Create Blog
+                            </button>
+
                             <button onClick={() => router.push("/auth/sign-in")} className="w-full text-white bg-brand hover:bg-brand focus:ring-4 
                 focus:outline-none focus:ring-blue-300 font-medium rounded-lg 
                 text-sm px-4 py-2 text-center">
                                 Sign In
                             </button>
-                            <button
-                        onClick={() => router.push("/auth/sign-up")}
-                        className="w-full text-white bg-brand hover:bg-brand focus:ring-4 
-                focus:outline-none focus:ring-blue-300 font-medium rounded-lg 
-                text-sm px-4 py-2 text-center">
-                                Sign Up
-                            </button>
+
                         </li>
                     </ul>
                 </div>
